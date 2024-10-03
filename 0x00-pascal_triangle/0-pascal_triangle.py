@@ -13,6 +13,9 @@ def pascal_triangle(n):
     Return:
         result (list) -- a list of lists of integers representing.
     """
+    if not isinstance(n, (int, float)):
+        raise TypeError('n must be an integer.')
+    n = int(n)
     result = []
     if n <= 0:
         return result
