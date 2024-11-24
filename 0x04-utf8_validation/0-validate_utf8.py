@@ -30,8 +30,8 @@ def validUTF8(data):
                 valid = False
         elif binary_representation[byte][0:4] == '1110':
             if byte + 2 < len(binary_representation):
-                if (binary_representation[byte + 1][0:2] == '10'
-                        and binary_representation[byte + 2][0:2] == '10'):
+                if binary_representation[byte + 1][0:2] == '10'\
+                        and binary_representation[byte + 2][0:2] == '10':
                     flag = 2
                 else:
                     valid = False
@@ -39,9 +39,9 @@ def validUTF8(data):
                 valid = False
         elif binary_representation[byte][0:5] == '11110':
             if byte + 3 < len(binary_representation):
-                if (binary_representation[byte + 1][0:2] == '10'
-                        and binary_representation[byte + 2][0:2] == '10'
-                        and binary_representation[byte + 3][0:2] == '10'):
+                if binary_representation[byte + 1][0:2] == '10'\
+                        and binary_representation[byte + 2][0:2] == '10'\
+                        and binary_representation[byte + 3][0:2] == '10':
                     flag = 3
                 else:
                     valid = False
