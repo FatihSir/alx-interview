@@ -15,7 +15,6 @@ def validUTF8(data):
     valid = True
     for i in data:
         binary_representation.append(format(i, '08b'))
-    print(binary_representation)
     for byte in range(len(binary_representation)):
         if binary_representation[byte][0] == '0':
             continue
@@ -31,7 +30,6 @@ def validUTF8(data):
                 valid = False
         elif binary_representation[byte][0:4] == '1110':
             if byte + 2 < len(binary_representation):
-                print(byte)
                 if (binary_representation[byte + 1][0:2] == '10'
                         and binary_representation[byte + 2][0:2] == '10'):
                     flag = 2
