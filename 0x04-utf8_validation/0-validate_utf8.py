@@ -14,7 +14,7 @@ def validUTF8(data):
     flag = 0
     valid = True
     for i in data:
-        binary_representation.append(format(i, '08b'))
+        binary_representation.append(format(i & 0xFF, '08b'))
     for byte in range(len(binary_representation)):
         if binary_representation[byte][0] == '0':
             continue
