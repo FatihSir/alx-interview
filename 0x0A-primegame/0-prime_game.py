@@ -22,8 +22,8 @@ def isWinner(x, nums):
         None: This function does not raise exceptions directly.
     """
     # Validate inputs
-    if (not isinstance(x, int)
-            or x <= 0 or not isinstance(nums, list) or not nums):
+    if not isinstance(x, int) or x <= 0\
+            or not isinstance(nums, list) or not nums:
         return None
 
     # Determine the maximum number for prime computation
